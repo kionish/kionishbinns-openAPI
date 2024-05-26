@@ -12,4 +12,49 @@ h1 {
     font-size: 64px;
     font-weight:bolder;
 }
+h2 {
+    justify-content: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: greenyellow;
+    color:red
+  }
 
+  #characters, #comics {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  .item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+  
