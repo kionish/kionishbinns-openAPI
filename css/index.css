@@ -13,7 +13,13 @@ h1 {
     font-weight:bolder;
 }
 h2 {
-    justify-content: center;
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+    color: greenyellow;
+    padding-bottom: 18px;
 }
 nav {
     display: flex;
@@ -33,9 +39,15 @@ nav {
     color:red
   }
 
-  #characters, #comics {
+  #characters {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+  #comics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     justify-items: center;
   }
@@ -50,11 +62,42 @@ nav {
   }
   
   .item:hover {
-    transform: scale(1.05);
+    transform: scale(1.25);
   }
   
   .item img {
     width: 100%;
     height: auto;
   }
-  
+  #gif {
+    width: 200px;
+    height: auto;
+    align-items: center;
+  }
+  #media {
+    display: flex;
+    padding-top: 400px;
+    justify-content: center;
+  }
+  #media img {
+    max-width: 100%; 
+    height: auto; 
+    
+  }
+
+  /* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 6vw;
+    }
+
+    button {
+        font-size: 3vw;
+        padding: 8px 16px;
+    }
+
+    #characters {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 15px;
+    }
+}
