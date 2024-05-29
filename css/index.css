@@ -21,6 +21,16 @@ h3 {
     color: greenyellow;
     padding-bottom: 18px;
 }
+#greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1.2s ease-in-out;
+}
+#greeting:hover {
+  transform: scale(1.2);
+}
+
 nav {
     display: flex;
     justify-content: center;
@@ -76,13 +86,16 @@ nav {
   }
   #media {
     display: flex;
-    padding-top: 400px;
+    margin-top: 400px;
     justify-content: center;
+    transition: transform 1.2s ease-in-out;
   }
   #media img {
     max-width: 100%; 
     height: auto; 
-    
+  }
+  #media:hover {
+    transform: scale(1.05);
   }
 
   /* Media Queries for Responsive Design */
