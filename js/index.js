@@ -25,7 +25,7 @@ const url = `https://gateway.marvel.com/v1/public/comics?ts=${ts}&apikey=${apiKe
 // Add event listeners to buttons
 document.getElementById("nav-home").addEventListener("click", homeButton);
 document.getElementById("nav-heroes").addEventListener("click", fetchHeroes);
-// document.getElementById('nav-comics').addEventListener('click', fetchComics);
+
 
 let heroSection = document.getElementById("hero-area");
 heroSection.hidden = true;
