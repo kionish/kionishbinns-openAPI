@@ -1,103 +1,127 @@
 body {
-    background-color:black;
-    color:red;
-    font-family: "Luxurious Roman", serif;
-    font-weight: 400;
-    font-style: normal;
+  background-color: black;
+  color: red;
+  font-family: "Luxurious Roman", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-h1 { 
-    font-style:oblique;
-    text-align: center;
-    font-size: 64px;
-    font-weight:bolder;
+h1 {
+  font-style: oblique;
+  text-align: center;
+  font-size: 64px;
+  font-weight: bolder;
 }
+
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 h3 {
-    text-align: center;
-    color: greenyellow;
-    padding-bottom: 18px;
+  text-align: center;
+  color: greenyellow;
+  padding-bottom: 18px;
 }
+
+#greeting {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1.2s ease-in-out;
+}
+
+#greeting:hover {
+  transform: scale(1.2);
+}
+
 nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: greenyellow;
+  color: red
+}
+
+#characters {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+#comics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.25);
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+}
+
+#gif {
+  width: 200px;
+  height: auto;
+  align-items: center;
+}
+
+#media {
+  display: flex;
+  margin-top: 400px;
+  justify-content: center;
+  transition: transform 1.2s ease-in-out;
+}
+
+#media img {
+  max-width: 100%;
+  height: auto;
+}
+
+#media:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
   }
+
   button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    border: none;
-    background-color: red;
-    color: white;
-    font-size: 16px;
-  }
-  button:hover {
-    background-color: greenyellow;
-    color:red
+    font-size: 3vw;
+    padding: 8px 16px;
   }
 
   #characters {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
   }
-  #comics {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-items: center;
-  }
-  .item {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s;
-  }
-  
-  .item:hover {
-    transform: scale(1.25);
-  }
-  
-  .item img {
-    width: 100%;
-    height: auto;
-  }
-  #gif {
-    width: 200px;
-    height: auto;
-    align-items: center;
-  }
-  #media {
-    display: flex;
-    padding-top: 400px;
-    justify-content: center;
-  }
-  #media img {
-    max-width: 100%; 
-    height: auto; 
-    
-  }
-
-  /* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 6vw;
-    }
-
-    button {
-        font-size: 3vw;
-        padding: 8px 16px;
-    }
-
-    #characters {
-        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-        gap: 15px;
-    }
 }
